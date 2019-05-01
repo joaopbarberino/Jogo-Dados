@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dice Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <hr>
+    <h1 style="text-align: center;"> Tenho sorte? </h1>
+    <hr>
+
+    <h1 style="position: left;">Jogador 1                        Jogador 2</h1> 
+    <section class="container">
+
+        <script>
+            let i1 = Math.round(Math.random() * 4) + 1;
+            document.write("<img id = 'imagem1' src='" + i1 + ".png'>");
+            let i2 = Math.round(Math.random() * 4) + 1;
+            document.write("<img id = 'imagem2' src='" + i2 + ".png'>");  
+            
+            soma = i1 + i2;
+            document.write("<h1 id = 'msgSoma'> A soma dos dados é: " + (i1+i2) + " e </h1>")
+            if (i1 > i2){
+                document.write("<h1 id = 'vencedor'> Jogador 1 venceu! </h1>")
+            } else if ( i2 > i1) {
+                document.write("<h1 id = 'vencedor'> Jogador 2 venceu! </h1>")
+            } else {
+                document.write("<h1 id = 'vencedor'> Empate! </h1>")
+            }
+        </script>
+        
+        <p></p>
+
+        <div style="text-align: center;">
+            <button id="botao" class="btn btn-success" style="display: inline-block; width: 50%; height: 50px;">Sortear</button>
+        </div>
+
+    </section>
+
+
+</body>
+
+</html>
