@@ -6,40 +6,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Dice Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="bootstrap.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script defer src="script.js"></script>
 </head>
 
-<body>
-    <hr>
-    <h1 style="text-align: center;"> Tenho sorte? </h1>
-    <hr>
-
-    <h1 style="position: left;">Jogador 1                        Jogador 2</h1> 
-    <section class="container">
-
-        <script>
-            let i1 = Math.round(Math.random() * 4) + 1;
-            document.write("<img id = 'imagem1' src='" + i1 + ".png'>");
-            let i2 = Math.round(Math.random() * 4) + 1;
-            document.write("<img id = 'imagem2' src='" + i2 + ".png'>");  
-            
-            soma = i1 + i2;
-            document.write("<h1 id = 'msgSoma'> A soma dos dados é: " + (i1+i2) + " e </h1>")
-            if (i1 > i2){
-                document.write("<h1 id = 'vencedor'> Jogador 1 venceu! </h1>")
-            } else if ( i2 > i1) {
-                document.write("<h1 id = 'vencedor'> Jogador 2 venceu! </h1>")
-            } else {
-                document.write("<h1 id = 'vencedor'> Empate! </h1>")
-            }
-        </script>
-        
-        <p></p>
-
-        <div style="text-align: center;">
-            <button id="botao" class="btn btn-success" style="display: inline-block; width: 50%; height: 50px;">Sortear</button>
+<body class="bg-dark">
+    <hr class="bg-light">
+    <h1 class="text-center text-white"> Você tem sorte? </h1>
+    <p class="text-center text-white"> Chame um amigo e use os botões</p>
+    <hr class="bg-light">
+    <section class="container-fluid">
+        <div class="row justify-content-center text-center">
+            <div class="col-12 col-md-6 d-block">
+                <img id = "imagem1" class="img-fluid mw-100 mh-100" src="1.png" alt="">
+                <div>
+                    <button id="botao1" class="btn btn-lg w-75 btn-outline-success my-5">Jogador 1</button>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 d-block">
+                <img id = "imagem2" class="img-fluid" src="1.png" >
+                <div>
+                    <button id="botao2" class="btn btn-lg w-75 btn-outline-success my-5">Jogador 2</button>
+                </div>
+            </div>
         </div>
+        <div class="row justify-content-center text-center text-white">
+            <div class="col-12 ">
+                <h2 id = "vencedor"> Jogador 1 venceu</h2>
+                <h3 id = "soma"> A soma dos valores é:</h3>
+            </div>
+        </div>
+
 
     </section>
 
