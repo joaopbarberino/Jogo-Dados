@@ -8,7 +8,7 @@ let gameLoop = true,
     imagem2 = document.getElementById("imagem2");
 
 const numAleatorio = function () {
-    return Math.round(Math.random() * 4) + 1;
+    return Math.floor(Math.random() * 6) + 1;
 }
 
 const jogada1 = function () {
